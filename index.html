@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Home Inventory & Expire Tracker</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; background-color: #f4f7f6; }
+        .container { background: #fff; padding: 40px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+        h1 { color: #2c3e50; border-bottom: 2px solid #eee; padding-bottom: 10px; font-size: 28px; }
+        h2 { color: #34495e; margin-top: 30px; font-size: 20px; }
+        ul { padding-left: 20px; }
+        .update-date { color: #7f8c8d; font-style: italic; font-size: 0.9em; }
+        .contact { background: #eef2f7; padding: 20px; border-left: 5px solid #3498db; margin-top: 30px; border-radius: 4px; }
+        
+        /* Nút chuyển đổi ngôn ngữ */
+        .lang-switch { display: flex; gap: 10px; margin-bottom: 20px; justify-content: flex-end; }
+        .lang-btn { padding: 8px 16px; cursor: pointer; border: 1px solid #3498db; background: #fff; color: #3498db; border-radius: 20px; font-weight: bold; transition: 0.3s; }
+        .lang-btn.active { background: #3498db; color: #fff; }
+
+        /* Logic ẩn hiện ngôn ngữ */
+        .content-en { display: none; }
+        body.lang-en .content-en { display: block; }
+        body.lang-en .content-vi { display: none; }
+    </style>
+</head>
+<body class="lang-vi" id="bodyTag">
+
+    <div class="container">
+        <div class="lang-switch">
+            <button class="lang-btn active" id="btnVi" onclick="switchLang('vi')">Tiếng Việt</button>
+            <button class="lang-btn" id="btnEn" onclick="switchLang('en')">English</button>
+        </div>
+
+        <div class="content-vi">
+            <h1>Chính sách Bảo mật</h1>
+            <p class="update-date">Cập nhật lần cuối: 25/03/2026</p>
+            <p>Chào mừng bạn đến với <strong>Home Inventory & Expire Tracker</strong>. Chúng tôi cam kết bảo vệ quyền riêng tư của bạn.</p>
+
+            <h2>1. Thu thập dữ liệu</h2>
+            <ul>
+                <li><strong>Camera:</strong> Chỉ dùng để quét mã vạch (Barcode). Chúng tôi không lưu trữ hình ảnh trừ khi bạn chọn lưu cục bộ.</li>
+                <li><strong>Bộ nhớ (Storage):</strong> Dữ liệu kho đồ được lưu trữ an toàn trong <strong>Room Database</strong> trên thiết bị của bạn.</li>
+                <li><strong>Đồng bộ Cloud:</strong> Nếu sử dụng tính năng đồng bộ, dữ liệu được lưu trên <strong>Google Firebase/Firestore</strong> để bạn có thể dùng chung với gia đình.</li>
+            </ul>
+
+            <h2>2. Quảng cáo (Ads)</h2>
+            <p>Ứng dụng sử dụng dịch vụ <strong>Google AdMob</strong> để hiển thị quảng cáo. AdMob có thể thu thập ID quảng cáo để hiển thị nội dung phù hợp với bạn.</p>
+
+            <h2>3. Quyền của người dùng</h2>
+            <p>Bạn có quyền xóa toàn bộ dữ liệu cục bộ bằng cách gỡ cài đặt ứng dụng hoặc xóa dữ liệu trong phần Cài đặt của điện thoại.</p>
+
+            <div class="contact">
+                <p>Nếu có bất kỳ câu hỏi nào, vui lòng liên hệ:</p>
+                <p>Email: <strong>[Địa chỉ email của bạn]</strong></p>
+            </div>
+        </div>
+
+        <div class="content-en">
+            <h1>Privacy Policy</h1>
+            <p class="update-date">Last updated: March 25, 2026</p>
+            <p>Welcome to <strong>Home Inventory & Expire Tracker</strong>. We are committed to protecting your privacy.</p>
+
+            <h2>1. Data Collection</h2>
+            <ul>
+                <li><strong>Camera:</strong> Used only for scanning barcodes. We do not store images unless you choose to save them locally.</li>
+                <li><strong>Storage:</strong> Your inventory data is securely stored in a <strong>Room Database</strong> on your device.</li>
+                <li><strong>Cloud Sync:</strong> If you use the sync feature, your data is stored on <strong>Google Firebase/Firestore</strong> for family sharing.</li>
+            </ul>
+
+            <h2>2. Advertising (Ads)</h2>
+            <p>This app uses <strong>Google AdMob</strong> services. AdMob may collect advertising IDs to show relevant advertisements to you.</p>
+
+            <h2>3. User Rights</h2>
+            <p>You have the right to delete all local data by uninstalling the app or clearing the app data in your phone settings.</p>
+
+            <div class="contact">
+                <p>If you have any questions, please contact us at:</p>
+                <p>Email: <strong>[Your Email Address]</strong></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function switchLang(lang) {
+            const body = document.getElementById('bodyTag');
+            const btnVi = document.getElementById('btnVi');
+            const btnEn = document.getElementById('btnEn');
+
+            if (lang === 'en') {
+                body.className = 'lang-en';
+                btnEn.classList.add('active');
+                btnVi.classList.remove('active');
+            } else {
+                body.className = 'lang-vi';
+                btnVi.classList.add('active');
+                btnEn.classList.remove('active');
+            }
+        }
+    </script>
+</body>
+</html>
