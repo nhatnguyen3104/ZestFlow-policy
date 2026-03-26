@@ -1,122 +1,322 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ZestFlow</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>ZestFlow | Privacy Policy</title>
     <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; background-color: #f4f7f6; }
-        .container { background: #fff; padding: 40px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
-        h1 { color: #2c3e50; border-bottom: 2px solid #eee; padding-bottom: 10px; font-size: 28px; }
-        h2 { color: #34495e; margin-top: 30px; font-size: 20px; }
-        ul { padding-left: 20px; }
-        .update-date { color: #7f8c8d; font-style: italic; font-size: 0.9em; }
-        .contact { background: #eef2f7; padding: 20px; border-left: 5px solid #3498db; margin-top: 30px; border-radius: 4px; }
-        
-        /* Nút chuyển đổi ngôn ngữ */
-        .lang-switch { display: flex; gap: 10px; margin-bottom: 20px; justify-content: flex-end; }
-        .lang-btn { padding: 8px 16px; cursor: pointer; border: 1px solid #3498db; background: #fff; color: #3498db; border-radius: 20px; font-weight: bold; transition: 0.3s; }
-        .lang-btn.active { background: #3498db; color: #fff; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-        /* Logic ẩn hiện ngôn ngữ */
-        .content-en { display: none; }
-        body.lang-en .content-en { display: block; }
-        body.lang-en .content-vi { display: none; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #1e2a3e;
+            background: #eef2f5;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 880px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 28px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+            transition: all 0.2s ease;
+        }
+
+        .policy-inner {
+            padding: 32px 36px 48px;
+        }
+
+        /* Language switcher – modern pill style */
+        .lang-switch {
+            display: flex;
+            gap: 12px;
+            justify-content: flex-end;
+            margin-bottom: 28px;
+            border-bottom: 1px solid #e9edf2;
+            padding-bottom: 20px;
+        }
+
+        .lang-btn {
+            background: transparent;
+            border: none;
+            font-size: 0.95rem;
+            font-weight: 600;
+            padding: 8px 20px;
+            border-radius: 40px;
+            cursor: pointer;
+            background-color: #f1f5f9;
+            color: #2c3e50;
+            transition: all 0.2s ease;
+            font-family: inherit;
+            letter-spacing: -0.2px;
+        }
+
+        .lang-btn.active {
+            background: #2c7a4d;
+            color: white;
+            box-shadow: 0 2px 6px rgba(44, 122, 77, 0.2);
+        }
+
+        .lang-btn:not(.active):hover {
+            background-color: #e2e8f0;
+            transform: translateY(-1px);
+        }
+
+        h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #1e4620, #2c7a4d);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            margin-bottom: 8px;
+            letter-spacing: -0.3px;
+        }
+
+        .update-date {
+            color: #5b6e8c;
+            font-size: 0.85rem;
+            border-left: 3px solid #2c7a4d;
+            padding-left: 12px;
+            margin: 16px 0 24px 0;
+            font-weight: 450;
+        }
+
+        h2 {
+            font-size: 1.45rem;
+            font-weight: 600;
+            color: #1e3a2f;
+            margin-top: 32px;
+            margin-bottom: 12px;
+            padding-bottom: 6px;
+            border-bottom: 2px solid #eef2f0;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            color: #2c3e44;
+        }
+
+        ul {
+            margin: 12px 0 16px 24px;
+            list-style-type: none;
+        }
+
+        li {
+            margin-bottom: 10px;
+            padding-left: 24px;
+            position: relative;
+            color: #2c3e44;
+        }
+
+        li::before {
+            content: "•";
+            color: #2c7a4d;
+            font-weight: bold;
+            font-size: 1.2rem;
+            position: absolute;
+            left: 4px;
+            top: -2px;
+        }
+
+        strong {
+            color: #1e4620;
+            font-weight: 600;
+        }
+
+        .contact {
+            background: #f8fafc;
+            padding: 22px 26px;
+            margin-top: 40px;
+            border-radius: 24px;
+            border-left: 6px solid #2c7a4d;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.02);
+        }
+
+        .contact p {
+            margin-bottom: 8px;
+        }
+
+        .contact p:last-child {
+            margin-bottom: 0;
+        }
+
+        .contact strong {
+            color: #0f3b2c;
+            font-weight: 700;
+        }
+
+        /* responsive touches */
+        @media (max-width: 640px) {
+            .policy-inner {
+                padding: 24px 20px 36px;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+            h2 {
+                font-size: 1.3rem;
+            }
+            .lang-switch {
+                gap: 8px;
+            }
+            .lang-btn {
+                padding: 6px 18px;
+                font-size: 0.85rem;
+            }
+        }
+
+        /* fade effect for smooth language toggle */
+        .content-en, .content-vi {
+            transition: opacity 0.1s ease;
+        }
+        body.lang-en .content-vi,
+        body.lang-vi .content-en {
+            display: none;
+        }
+        body.lang-en .content-en,
+        body.lang-vi .content-vi {
+            display: block;
+        }
     </style>
 </head>
-<body class="lang-vi" id="bodyTag">
-
+<body id="bodyTag" class="lang-en">   <!-- Mặc định hiển thị English -->
     <div class="container">
-        <div class="lang-switch">
-            <button class="lang-btn active" id="btnVi" onclick="switchLang('vi')">Tiếng Việt</button>
-            <button class="lang-btn" id="btnEn" onclick="switchLang('en')">English</button>
-        </div>
+        <div class="policy-inner">
+            <div class="lang-switch">
+                <button class="lang-btn" id="btnVi" onclick="switchLang('vi')">🇻🇳 Tiếng Việt</button>
+                <button class="lang-btn active" id="btnEn" onclick="switchLang('en')">🇬🇧 English</button>
+            </div>
 
-        <div class="content-vi">
-            <h1>Chính sách Bảo mật</h1>
-            <p class="update-date">Cập nhật lần cuối: 25/03/2026</p>
-            <p>Chào mừng bạn đến với <strong>ZestFlow</strong>. Chúng tôi cam kết bảo vệ quyền riêng tư của bạn.</p>
+            <!-- Nội dung tiếng Việt -->
+            <div class="content-vi">
+                <h1>Chính sách Bảo mật</h1>
+                <p class="update-date">Cập nhật lần cuối: 25/03/2026</p>
+                <p>Chào mừng bạn đến với <strong>ZestFlow</strong>. Chúng tôi cam kết bảo vệ quyền riêng tư của bạn.</p>
 
-            <h2>1. Thu thập dữ liệu</h2>
-            <ul>
-                <li><strong>Camera:</strong> Chỉ dùng để quét mã vạch (Barcode), có thể chụp ảnh sản phẩm. Chúng tôi không lưu trữ hình ảnh trừ khi bạn chọn lưu cục bộ hoặc lưu trên máy chủ (có thể tắt bên trong ứng dụng).</li>
-                <li><strong>Bộ nhớ (Storage):</strong> Dữ liệu kho đồ được lưu trữ an toàn trong <strong>Room Database</strong> trên thiết bị của bạn.</li>
-                <li><strong>Đồng bộ Cloud:</strong> Nếu sử dụng tính năng đồng bộ, dữ liệu được lưu trên <strong>Google Firebase/Firestore</strong> để bạn có thể dùng chung với gia đình.</li>
-            </ul>
+                <h2>1. Thu thập dữ liệu</h2>
+                <ul>
+                    <li><strong>Camera:</strong> Chỉ dùng để quét mã vạch (Barcode), có thể chụp ảnh sản phẩm. Chúng tôi không lưu trữ hình ảnh trừ khi bạn chọn lưu cục bộ hoặc lưu trên máy chủ (có thể tắt bên trong ứng dụng).</li>
+                    <li><strong>Bộ nhớ (Storage):</strong> Dữ liệu kho đồ được lưu trữ an toàn trong <strong>Room Database</strong> trên thiết bị của bạn.</li>
+                    <li><strong>Đồng bộ Cloud:</strong> Nếu sử dụng tính năng đồng bộ, dữ liệu được lưu trên <strong>Google Firebase/Firestore</strong> để bạn có thể dùng chung với gia đình.</li>
+                </ul>
 
-            <h2>2. Quảng cáo (Ads)</h2>
-            <p>Ứng dụng sử dụng dịch vụ <strong>Google AdMob</strong> để hiển thị quảng cáo. AdMob có thể thu thập ID quảng cáo để hiển thị nội dung phù hợp với bạn.</p>
+                <h2>2. Quảng cáo (Ads)</h2>
+                <p>Ứng dụng sử dụng dịch vụ <strong>Google AdMob</strong> để hiển thị quảng cáo. AdMob có thể thu thập ID quảng cáo để hiển thị nội dung phù hợp với bạn.</p>
 
-            <h2>3. Thông báo</h2>
-            <p>Chúng tôi gửi thông báo để nhắc nhở bạn về các sản phẩm sắp hết hạn sử dụng. Bạn có thể quản lý hoặc tắt các thông báo này bất kỳ lúc nào trong phần Cài đặt của thiết bị.</p>
+                <h2>3. Thông báo</h2>
+                <p>Chúng tôi gửi thông báo để nhắc nhở bạn về các sản phẩm sắp hết hạn sử dụng. Bạn có thể quản lý hoặc tắt các thông báo này bất kỳ lúc nào trong phần Cài đặt của thiết bị.</p>
 
-            <h2>4. Nội dung do người dùng đóng góp (Community Data)</h2>
+                <h2>4. Nội dung do người dùng đóng góp (Community Data)</h2>
                 <p>Nếu sản phẩm chưa có trong hệ thống, bạn có tùy chọn đóng góp thông tin (Tên sản phẩm, Barcode) lên cơ sở dữ liệu chung của chúng tôi.</p>
                 <ul>
-                <li>Dữ liệu này sẽ giúp những người dùng khác có thể nhận diện sản phẩm nhanh hơn khi quét cùng mã vạch.</li>
-                <li>Chúng tôi cam kết <strong>không thu thập bất kỳ thông tin cá nhân nào</strong> của bạn (như tên, email, vị trí) kèm theo dữ liệu đóng góp này.</li>
+                    <li>Dữ liệu này sẽ giúp những người dùng khác có thể nhận diện sản phẩm nhanh hơn khi quét cùng mã vạch.</li>
+                    <li>Chúng tôi cam kết <strong>không thu thập bất kỳ thông tin cá nhân nào</strong> của bạn (như tên, email, vị trí) kèm theo dữ liệu đóng góp này.</li>
                 </ul>
-            
-            <h2>5. Quyền của người dùng</h2>
-            <p>Bạn có quyền xóa toàn bộ dữ liệu cục bộ bằng cách gỡ cài đặt ứng dụng hoặc xóa dữ liệu trong phần Cài đặt của điện thoại.
 
-            <div class="contact">
-                <p>Nếu có bất kỳ câu hỏi nào, vui lòng liên hệ:</p>
-                <p>Email: <strong>nhat09166@gmail.com</strong></p>
+                <h2>5. Quyền của người dùng</h2>
+                <p>Bạn có quyền xóa toàn bộ dữ liệu cục bộ bằng cách gỡ cài đặt ứng dụng hoặc xóa dữ liệu trong phần Cài đặt của điện thoại.</p>
+
+                <div class="contact">
+                    <p>📧 Nếu có bất kỳ câu hỏi nào, vui lòng liên hệ:</p>
+                    <p>Email: <strong>nhat09166@gmail.com</strong></p>
+                </div>
             </div>
-        </div>
 
-        <div class="content-en">
-            <h1>Privacy Policy</h1>
-            <p class="update-date">Last updated: March 25, 2026</p>
-            <p>Welcome to <strong>Home Inventory & Expire Tracker</strong>. We are committed to protecting your privacy.</p>
+            <!-- Nội dung tiếng Anh (mặc định hiển thị) -->
+            <div class="content-en">
+                <h1>Privacy Policy</h1>
+                <p class="update-date">Last updated: March 25, 2026</p>
+                <p>Welcome to <strong>ZestFlow</strong> — your smart home inventory & expiry tracker. We are committed to protecting your privacy and handling your data with transparency.</p>
 
-            <h2>1. Data Collection</h2>
-            <ul>
-                <li><strong>Camera:</strong> Used only for scanning barcodes; product photos can also be taken. We do not store images unless you choose to save them locally or on a server (this can be disabled).</li>
-                <li><strong>Storage:</strong> Your inventory data is securely stored in a <strong>Room Database</strong> on your device.</li>
-                <li><strong>Cloud Sync:</strong> If you use the sync feature, your data is stored on <strong>Google Firebase/Firestore</strong> for family sharing.</li>
-            </ul>
+                <h2>1. Data Collection</h2>
+                <ul>
+                    <li><strong>Camera:</strong> Used only for scanning barcodes; you may also take product photos. We do not store images unless you explicitly choose to save them locally or on a server (this feature can be disabled in settings).</li>
+                    <li><strong>Storage:</strong> Your inventory data is securely stored in a <strong>Room Database</strong> on your device. No external access unless you enable cloud sync.</li>
+                    <li><strong>Cloud Sync:</strong> If you enable synchronization, your data is stored on <strong>Google Firebase / Firestore</strong> to allow secure sharing with your family members.</li>
+                </ul>
 
-            <h2>2. Advertising (Ads)</h2>
-            <p>This app uses <strong>Google AdMob</strong> services. AdMob may collect advertising IDs to show relevant advertisements to you.</p>
+                <h2>2. Advertising (Ads)</h2>
+                <p>This application uses <strong>Google AdMob</strong> services to display advertisements. AdMob may collect advertising identifiers (e.g., AAID) to serve personalized or contextual ads. You can reset your advertising ID in device settings.</p>
 
-            <h2>3. Push Notifications</h2>
-            <p>We send notifications to remind you about products that are nearing their expiration date. You can manage or disable these notifications at any time in your device settings.</p>
+                <h2>3. Push Notifications</h2>
+                <p>We send local push notifications to remind you about products approaching their expiration dates. You may manage or disable all notifications at any time via your device’s notification settings.</p>
 
-            <h2>4. User-Contributed Content (Community Data)</h2>
-            <p>If a product is not found in our system, you have the option to contribute its information (Product Name, Barcode) to our global database.</p>
-            <ul>
-            <li>This data helps other users identify products more quickly when scanning the same barcode.</li>
-            <li>We guarantee that <strong>no personal information</strong> (such as your name, email, or location) is attached to or collected along with this contributed data.</li>
-            </ul>
-            
-            <h2>5. User Rights</h2>
-            <p>You have the right to delete all local data by uninstalling the app or clearing the app data in your phone settings.</p>
+                <h2>4. User-Contributed Content (Community Data)</h2>
+                <p>When a product is missing from our reference database, you may optionally contribute product information (Product Name, Barcode) to the community catalog.</p>
+                <ul>
+                    <li>This shared data helps other users instantly recognize items when scanning the same barcode.</li>
+                    <li>We do <strong>not collect any personal information</strong> (such as name, email address, or location) along with your contribution. The shared data remains anonymous and product-focused.</li>
+                </ul>
 
-            <div class="contact">
-                <p>If you have any questions, please contact us at:</p>
-                <p>Email: <strong>nhat09166@gmail.com</strong></p>
+                <h2>5. Your Rights & Control</h2>
+                <p>You have full control over your data. You may delete all locally stored inventory data by uninstalling the app or clearing app data from system settings. For cloud sync users, you may request data deletion through the app’s sync management panel.</p>
+
+                <div class="contact">
+                    <p>📩 If you have any questions, privacy concerns, or need assistance, please contact us:</p>
+                    <p>Email: <strong>nhat09166@gmail.com</strong></p>
+                </div>
             </div>
         </div>
     </div>
 
     <script>
+        // Hàm chuyển đổi ngôn ngữ giữa tiếng Việt và tiếng Anh
         function switchLang(lang) {
             const body = document.getElementById('bodyTag');
             const btnVi = document.getElementById('btnVi');
             const btnEn = document.getElementById('btnEn');
 
             if (lang === 'en') {
-                body.className = 'lang-en';
+                body.classList.remove('lang-vi');
+                body.classList.add('lang-en');
+                // Cập nhật trạng thái active cho nút
+                btnEn.classList.add('active');
+                btnVi.classList.remove('active');
+                // Lưu lại preference vào localStorage để giữ ngôn ngữ nếu cần (optional)
+                localStorage.setItem('zestflow_lang', 'en');
+            } else {
+                body.classList.remove('lang-en');
+                body.classList.add('lang-vi');
+                btnVi.classList.add('active');
+                btnEn.classList.remove('active');
+                localStorage.setItem('zestflow_lang', 'vi');
+            }
+        }
+
+        // Khôi phục ngôn ngữ đã chọn trước đó (nếu có) nhưng vẫn đảm bảo mặc định là English
+        (function initLanguage() {
+            const body = document.getElementById('bodyTag');
+            const btnVi = document.getElementById('btnVi');
+            const btnEn = document.getElementById('btnEn');
+            const savedLang = localStorage.getItem('zestflow_lang');
+            
+            // Nếu có lưu ngôn ngữ trước đó, ưu tiên dùng savedLang, nếu không thì mặc định 'en'
+            let activeLang = savedLang ? savedLang : 'en';
+            
+            // Đảm bảo activeLang hợp lệ (chỉ 'en' hoặc 'vi')
+            if (activeLang !== 'en' && activeLang !== 'vi') activeLang = 'en';
+            
+            if (activeLang === 'en') {
+                body.classList.remove('lang-vi');
+                body.classList.add('lang-en');
                 btnEn.classList.add('active');
                 btnVi.classList.remove('active');
             } else {
-                body.className = 'lang-vi';
+                body.classList.remove('lang-en');
+                body.classList.add('lang-vi');
                 btnVi.classList.add('active');
                 btnEn.classList.remove('active');
             }
-        }
+        })();
     </script>
 </body>
 </html>
